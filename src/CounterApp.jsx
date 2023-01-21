@@ -26,7 +26,7 @@ export const CounterApp = ({ value }) => {
 
     return <>
         <h1>CounterApp</h1>
-        <h2> { counter } </h2>
+        <h2  data-testid="counter">{ counter }</h2>
         
         <button onClick={ increment }>
             +1
@@ -34,7 +34,7 @@ export const CounterApp = ({ value }) => {
         <button onClick={ decrement }>
             -1
         </button>
-        <button onClick={ reset }>
+        <button aria-label="btn-reset" onClick={ reset }>
             Reset
         </button>
     </>

@@ -4,9 +4,10 @@ export const FirstApp = ( { title, subTitle } ) => {
 
   return (
     <>
-      <h1>{ title }</h1>
+      <h1 data-testid='test-title'>{ title }</h1>
       {/* <h1>{newMessage}</h1> */}
-      <p>{ subTitle + 1 }</p>
+      <p>{ subTitle }</p>
+      <p>{ subTitle }</p>
     </>
   );
 };
@@ -14,10 +15,10 @@ export const FirstApp = ( { title, subTitle } ) => {
 
 FirstApp.propTypes = {
   title: PropTypes.string.isRequired, 
-  subTitle: PropTypes.number.isRequired, 
+  subTitle: PropTypes.string, 
 }
 
 FirstApp.defaultProps = {
-  title: 'No hay titulo', 
-  subTitle: 0, 
+  // title: 'No hay titulo', 
+  subTitle: 'Subtitulo', 
 }
